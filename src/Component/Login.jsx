@@ -46,16 +46,15 @@ const Login = () => {
       }
     return (
         <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Login now!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-    </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-      <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+  <div className="hero-content ">
+
+    <div className="  w-[600px] h-[400px] mx-auto p-8 shadow-2xl rounded-2xl" 
+    style={{backgroundImage: `url('/image/sundarban.avif')`, backgroundRepeat:"no-repeat"}} >
+    <h1 className="text-5xl font-bold text-white text-center">Login now!</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className="">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text text-white">Email</span>
           </label>
           <input type="email" placeholder="email" className="input input-bordered"
            {...register("email",{required:true})}
@@ -65,26 +64,26 @@ const Login = () => {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text text-white">Password</span>
           </label>
           <input type="password" placeholder="password" className="input input-bordered" 
           {...register("password", {required:true})}
            />
            {errors.password && <small className="text-red-500">This field is required</small>}
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          {/* <label className="label">
+            <a href="#" className="label-text-alt link link-hover ">Forgot password?</a>
+          </label> */}
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-[green] border-none text-white">Login</button>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between text-white">
             <h1>New here?</h1>
             <Link to="/register"><h1>Register Now</h1></Link>
         </div>
        <Toaster></Toaster>
       </form>
-      <div className="mb-8 text-center space-x-8">
+      <div className="mb-8 text-center space-x-8 text-white">
             <button onClick={()=>handleSocial(googleLogin)}><FaGoogle /></button>
             <button onClick={()=>handleSocial(githubLogin)}><FaGithub /></button>
         </div>
