@@ -1,17 +1,28 @@
 import { Link } from "react-router-dom";
+import { SlLocationPin } from "react-icons/sl";
 
 
 const ViewDetails = ({detail}) => {
-    const{_id,image,countryname}=detail
+    const{image,spotname,cost,countryname,description,location,season,time,visitor,_id}=detail
+    const desc = (desc)=>{
+      const words = desc.split(' ');
+      const newWords = words.slice(0,25);
+      return newWords.join(' ')
+    }
+    const newdesc = desc(description)
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card h-[800px] bg-base-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">{countryname}</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <Link to={`/details/${_id}`}><button className="btn btn-primary">view details</button></Link>
+    <h2 className="card-title">Spot Name : {spotname}</h2>
+    <h2 className="card-title">Country Name : {countryname}</h2>
+    <h2 className="card-title"><SlLocationPin />  {location}</h2>
+    <h2 className="card-title">Average Cost :   {cost}</h2>
+    <h2 className="card-title">Seasonality :   {season}</h2>
+    <p className="card-title">Description : {newdesc}...</p>
+    <div className="">
+      <Link to={`/details/${_id}`}><button className="btn bg-[green] text-white w-full">view details</button></Link>
     </div>
   </div>
 </div>
