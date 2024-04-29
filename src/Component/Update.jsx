@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import UseAuth from "./UseAuth";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 
 const Update = () => {
@@ -34,7 +35,12 @@ const Update = () => {
         .then(data=>{
             console.log(data)
             if(data.modifiedCount>0){
-                alert('updated')
+                Swal.fire({
+                    title: 'success!',
+                    text: 'Spot Updated sucssesfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
             }
         })
     }
@@ -45,6 +51,7 @@ const Update = () => {
         .then(data => {
             setPlace(data)
             console.log(data)
+           
         })
     },[id])
     return (
@@ -56,31 +63,31 @@ const Update = () => {
                 <div className="label">
                     <span className="label-text">name</span>
                 </div>
-                <input type="text" name="name" placeholder="give your name" className="input input-bordered w-full " />
+                <input type="text" name="name" placeholder="give your name" className="input input-bordered w-full " required/>
             </label>
           <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Image Url</span>
                 </div>
-                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-full " />
+                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Country Name</span>
                 </div>
-                <input type="text" name="countryname" placeholder="give your country name" className="input input-bordered w-full " />
+                <input type="text" name="countryname" placeholder="give your country name" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Average Cost</span>
                 </div>
-                <input type="text" name="cost" placeholder="average cost" className="input input-bordered w-full " />
+                <input type="text" name="cost" placeholder="average cost" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Travel Time</span>
                 </div>
-                <input type="text" name="time" placeholder="Time" className="input input-bordered w-full " />
+                <input type="text" name="time" placeholder="Time" className="input input-bordered w-full " required/>
             </label>
           </div>
           <div>
@@ -89,25 +96,25 @@ const Update = () => {
                 <div className="label">
                     <span className="label-text">Tourist Spot Name</span>
                 </div>
-                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-full" />
+                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Location</span>
                 </div>
-                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-full" />
+                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Season</span>
                 </div>
-                <input type="text" name="season" placeholder="Season" className="input input-bordered w-full" />
+                <input type="text" name="season" placeholder="Season" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Total visitor</span>
                 </div>
-                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-full" />
+                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-full " required/>
             </label>
           </div>
           
@@ -117,7 +124,7 @@ const Update = () => {
                 <div className="label">
                     <span className="label-text">Descriptio</span>
                 </div>
-                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-full " />
+                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-full " required/>
             </label>
         </div>
         <div className="ml-52 mr-52 mt-4" >

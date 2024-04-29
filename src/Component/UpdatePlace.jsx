@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import UseAuth from "./UseAuth";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 
 const UpdatePlace = () => {
@@ -23,8 +24,27 @@ const UpdatePlace = () => {
         })
         .then((res)=> res.json())
         .then((data)=>{
-            if(data.deletedCount>0){
-                setControl(!control)
+            if(data.deletedCount>0 || data.deletedCount===0){
+              Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  setControl(!control)
+                  Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                  });
+                 
+                }
+              });
+               
             }
             console.log(data)
         })
