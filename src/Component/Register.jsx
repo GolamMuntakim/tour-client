@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
-    const {createUser, user,updateUserProfile,logOut} = UseAuth()
+    const {createUser, user,updateUserProfile,logOut,loading} = UseAuth()
     const {
         register,
         handleSubmit,
@@ -19,6 +19,7 @@ const Register = () => {
         if(!uppercaseRegx.test(password)){
             return;
         }
+       
         createUser(email, password).then(()=>{
             updateUserProfile(fullname, email, image)
             .then(()=>{
@@ -27,6 +28,9 @@ const Register = () => {
             logOut()
         })
         toast.success(' registered succesfully')
+      }
+      if(loading){
+        return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
       }
     return (
         <div className="hero min-h-screen bg-base-200">

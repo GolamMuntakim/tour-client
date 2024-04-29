@@ -6,7 +6,7 @@ import UseAuth from "./UseAuth";
 const Viewcard = () => {
     // const detail = useLoaderData()
     // console.log(detail)
-    const {user} = UseAuth()
+    const {user,loading} = UseAuth()
     console.log(user)
     const [viewcard, setViewcard] = useState([])
     // console.log(viewcard)
@@ -20,6 +20,9 @@ const Viewcard = () => {
             console.log(data)
         })
     },[id])
+    if(loading){
+        return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
+      }
     return (
         <div className="">
           <section>

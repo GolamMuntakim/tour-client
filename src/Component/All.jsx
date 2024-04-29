@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 
 import Card from "./Card";
 import { useState } from "react";
+import UseAuth from "./UseAuth";
 
 
 
@@ -12,6 +13,7 @@ const All = () => {
     // console.log(spot)
    const [sortedSpot, setSortedSpot] = useState([...spot]);
    const [sortDirection , setSortDirection] = useState('desc');
+   
    const sortByCost = ()=>{
     const sorted = [...spot].sort((a,b)=>{
         if(sortDirection === 'desc'){
@@ -23,6 +25,7 @@ const All = () => {
     setSortedSpot(sorted)
     setSortDirection(sortDirection === 'desc'? 'asc' : 'desc')
    }
+  
     return (
         <div>
             <div>

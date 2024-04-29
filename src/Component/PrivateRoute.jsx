@@ -1,11 +1,15 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import UseAuth from "./UseAuth";
 
 
 const PrivateRoute = ({children}) => {
-    const {user}= UseAuth()
+    const {user,loading}= UseAuth()
+    const location = useLocation()
+    if(loading){
+        return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
+      }
     if(!user){
-        return <Navigate to="/login" />
+        return <Navigate to="/login" state={location?.pathname || '/'}/>
     }
     return (
         <div>

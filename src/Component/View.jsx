@@ -21,7 +21,7 @@ const View = () => {
     // console.log(filteredCard)
     return (
         <>
-            < div className="grid grid-cols-3">
+            < div className="grid grid-cols-3 w-[1200px] mx-auto">
               
                 {
                     details.map(detail => <ViewDetails key={detail._id} detail={detail}></ViewDetails>)

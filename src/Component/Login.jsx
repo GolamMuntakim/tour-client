@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
-    const {logInUser,googleLogin,githubLogin} =  UseAuth()
+    const {logInUser,googleLogin,githubLogin,loading} =  UseAuth()
     const {
         register,
         handleSubmit,
@@ -32,6 +32,9 @@ const Login = () => {
                 toast.error('login failed')
             }
         })
+      }
+      if(loading){
+        return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
       }
       const handleSocial=(social)=>{
         social()

@@ -8,6 +8,7 @@ import auth from "./Firebase.config";
 export const AuthContext = createContext(null)
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true)
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const createUser = (email, password)=>{
@@ -36,13 +37,15 @@ const AuthProvider = ({children}) => {
     //observer
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth,(user)=>{
+            setLoading(true)
             if(user){
                 setUser(user)
             }
+            setLoading(false)
         })
         return ()=>unsubscribe()
     },[auth])
-    const info = {createUser, user,logOut,updateUserProfile,logInUser,setUser,googleLogin,githubLogin}
+    const info = {createUser, user,logOut,updateUserProfile,logInUser,setUser,googleLogin,githubLogin,loading}
     return (
         <AuthContext.Provider value={info}>
             {children}

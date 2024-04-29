@@ -44,12 +44,13 @@ const Addplace = () => {
                     title: 'success!',
                     text: 'Spot Adedd sucssesfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'OK'
                   })
             }
         })
 
     }
+   
     return (
         <div className="bg-base-300">
         <form onSubmit={handleAdd}>

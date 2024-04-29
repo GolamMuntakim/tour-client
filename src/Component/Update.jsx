@@ -39,7 +39,7 @@ const Update = () => {
                     title: 'success!',
                     text: 'Spot Updated sucssesfully',
                     icon: 'success',
-                    confirmButtonText: 'Cool'
+                    confirmButtonText: 'OK'
                   })
             }
         })

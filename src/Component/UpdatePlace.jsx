@@ -6,11 +6,11 @@ import Swal from "sweetalert2";
 
 
 const UpdatePlace = () => {
-    const {user} = UseAuth()
-    
+    const {user,loading} = UseAuth()
     const [item, setItem]= useState([])
     const [control, setControl] = useState(false)
     //  console.log(user)
+   
     useEffect(()=>{
         fetch(`https://tour-server-ten.vercel.app/mylist/${user?.email}`)
         .then(res=>res.json())
@@ -18,6 +18,10 @@ const UpdatePlace = () => {
             setItem(data)
         })
     },[user,control])
+    if(loading){
+      return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
+    }
+    
     const handleDelete = (id)=>{
         fetch(`https://tour-server-ten.vercel.app/delete/${id}`,{
             method:"DELETE",
@@ -49,6 +53,7 @@ const UpdatePlace = () => {
             console.log(data)
         })
     }
+   
     return (
         <div className="overflow-x-auto">
         <table className="table">

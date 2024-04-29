@@ -18,15 +18,18 @@ import Countries from './Component/Countries.jsx';
 import View from './Component/View.jsx';
 import Viewcard from './Component/Viewcard.jsx';
 import PrivateRoute from './Component/PrivateRoute.jsx';
+import Error from './Component/Error.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/',
         element:<Home></Home>,
         loader:()=>fetch('https://tour-server-ten.vercel.app/places')
+        
       },
       {
         path:'/addplace',
@@ -35,7 +38,7 @@ const router = createBrowserRouter([
       {
         path:'/updateplace',
         element:<PrivateRoute><UpdatePlace></UpdatePlace></PrivateRoute>,
-        // loader:()=>fetch('https://tour-server-ten.vercel.app/places')
+        
       },
       {
         path:'/login',
