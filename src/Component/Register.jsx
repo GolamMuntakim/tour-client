@@ -35,14 +35,12 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Regsiter now!</h1>
-          </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+          <div className=" shrink-0 w-[500px]  p-10 shadow-2xl bg-[url('/image/Angkor.avif')] bg-no-repeat bg-cover rounded-2xl ">
+          <h1 className="text-4xl font-bold text-white text-center">Regsiter now</h1>
+            <form onSubmit={handleSubmit(onSubmit)} className="">
             <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Full Name</span>
+                  <span className="label-text text-white">Full Name</span>
                 </label>
                 <input type="text" placeholder="Full Name" className="input input-bordered"
                  {...register("fullname",{required:true})}
@@ -51,7 +49,7 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text text-white">Email</span>
                 </label>
                 <input type="email" placeholder="email" className="input input-bordered"
                  {...register("email",{required:true})}
@@ -60,7 +58,7 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Image Url</span>
+                  <span className="label-text text-white">Image Url</span>
                 </label>
                 <input type="text" placeholder="Image Url" className="input input-bordered"
                  {...register("image",{required:true})}
@@ -69,7 +67,7 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text text-white">Password</span>
                 </label>
                 <input type="password" placeholder="password" className="input input-bordered" 
                 {...register("password", {required:true,minLength:6,validate:value=>uppercaseRegx.test(value)|| "password must have an at least one uppercase and one lowercase letter"})}/>
@@ -79,15 +77,15 @@ const Register = () => {
 
                  {errors.password && errors.password.type ==="validate" &&<small className="text-red-500">{errors.password.message}</small>}
 
-                <label className="label">
+                {/* <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label>
+                </label> */}
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Regsiter</button>
+                <button className="btn bg-[green] text-white border-none">Regsiter</button>
               </div>
               <Toaster></Toaster>
-              <div className="flex justify-between">
+              <div className="flex justify-between text-white">
             <h1>Already registered?</h1>
             <Link to="/login"><h1>Login Now</h1></Link>
         </div>
