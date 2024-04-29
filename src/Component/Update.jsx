@@ -25,7 +25,7 @@ const Update = () => {
         const usermail = user.email
         const updateinfo = { image,countryname,cost, time, spotname, location,season, visitor, description,usermail,name }
         console.log(updateinfo)
-        fetch(`http://localhost:5000/update/${id}`,{
+        fetch(`https://tour-server-ten.vercel.app/update/${id}`,{
             method:"PUT",
             headers:{"content-type": "application/json"},
             body:JSON.stringify(updateinfo)
@@ -40,7 +40,7 @@ const Update = () => {
     }
    
     useEffect(()=>{
-        fetch(`http://localhost:5000/singleplace/${id}`)
+        fetch(`https://tour-server-ten.vercel.app/singleplace/${id}`)
         .then(res => res.json())
         .then(data => {
             setPlace(data)

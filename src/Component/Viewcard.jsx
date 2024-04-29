@@ -10,7 +10,7 @@ const Viewcard = () => {
     const {image,spotname} = viewcard
     const {id}=useParams()
     useEffect(()=>{
-        fetch(`http://localhost:5000/details/${id}`)
+        fetch(`https://tour-server-ten.vercel.app/details/${id}`)
         .then(res=>res.json())
         .then(data=>{
             setViewcard(data)

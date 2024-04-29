@@ -11,14 +11,14 @@ const UpdatePlace = () => {
     const [control, setControl] = useState(false)
     //  console.log(user)
     useEffect(()=>{
-        fetch(`http://localhost:5000/mylist/${user?.email}`)
+        fetch(`https://tour-server-ten.vercel.app/mylist/${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             setItem(data)
         })
     },[user,control])
     const handleDelete = (id)=>{
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://tour-server-ten.vercel.app/delete/${id}`,{
             method:"DELETE",
         })
         .then((res)=> res.json())

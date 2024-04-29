@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/places')
+        loader:()=>fetch('https://tour-server-ten.vercel.app/places')
       },
       {
         path:'/addplace',
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path:'/updateplace',
         element:<UpdatePlace></UpdatePlace>,
-        // loader:()=>fetch('http://localhost:5000/places')
+        // loader:()=>fetch('https://tour-server-ten.vercel.app/places')
       },
       {
         path:'/login',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path:'/all',
         element:<All></All>,
-        loader:()=>fetch('http://localhost:5000/places')
+        loader:()=>fetch('https://tour-server-ten.vercel.app/places')
       },
       {
         path:'/update/:id',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
       {
         path:'/details/:id',
         element:<Viewcard></Viewcard>,
-        // loader:()=>fetch(`http://localhost:5000/details`)
+        // loader:()=>fetch(`https://tour-server-ten.vercel.app/details`)
       }
     ]
   },

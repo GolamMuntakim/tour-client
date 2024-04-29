@@ -10,7 +10,7 @@ const View = () => {
     const [details, setDetails] = useState([])
     // console.log(details)
     useEffect(() => {
-        fetch(`http://localhost:5000/viewdetail/${id}`)
+        fetch(`https://tour-server-ten.vercel.app/viewdetail/${id}`)
             .then(res => res.json())
             .then(data => {
                 setDetails(data)

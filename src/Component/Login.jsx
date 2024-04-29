@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import UseAuth from "./UseAuth";
 import { FaGoogle } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
@@ -19,27 +20,16 @@ const Login = () => {
         logInUser(email, password)
         .then(result=>{
             console.log(result)
-            // const user = {displayName};
-            // fetch('http://localhost:5000/user',{
-            //     method:'POST',
-            //     hearders:{
-            //         'content-type':'application/json'
-            //     },
-            //     body:JSON.stringify(user)
-            // })
-            // .then(res => res.json())
-            // .then(data=>{
-            //     console.log(data)
-            // })
+            
             if(result.user){
                 navigate(from)
             }
         })
         .catch((error)=>{
             if(error.code === "auth/invalid-credential"){
-                alert('password is incorrect')
+                toast.error('password is incorrect')
             }else{
-                alert('login failed')
+                toast.error('login failed')
             }
         })
       }
@@ -89,7 +79,7 @@ const Login = () => {
             <h1>New here?</h1>
             <Link to="/register"><h1>Register Now</h1></Link>
         </div>
-       
+       <Toaster></Toaster>
       </form>
       <div className="mb-8 text-center space-x-8">
             <button onClick={()=>handleSocial(googleLogin)}><FaGoogle /></button>

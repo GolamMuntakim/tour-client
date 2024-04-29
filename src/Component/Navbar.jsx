@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import UseAuth from './UseAuth';
+import sign from './sign.json'
+import signup from './signup.json'
+import Lottie from 'lottie-react';
 
 const Navbar = () => {
     const { user, logOut } = UseAuth()
@@ -19,17 +22,17 @@ const Navbar = () => {
     }
     // console.log(theme)
     const Links = <>
-        <NavLink to='/'><li><a>Home</a></li></NavLink>
-        <NavLink to='/all'><li><a>All Tourist Spot</a></li></NavLink>
-        <NavLink to='/addplace'><li><a>Add Touris Spot</a></li></NavLink>
-        <NavLink to='/updateplace'><li><a>My List</a></li></NavLink>
+        <NavLink to='/' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>Home</a></li></NavLink>
+        <NavLink to='/all' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>All Tourist Spot</a></li></NavLink>
+        <NavLink to='/addplace' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>Add Touris Spot</a></li></NavLink>
+        <NavLink to='/updateplace' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>My List</a></li></NavLink>
 
     </>
 
     return (
-        <div>
+        <div className='w-[1200px] m-auto '>
             <div className="navbar bg-base-100 ">
-                <div className="navbar-start">
+                <div className="navbar-start w-80">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -40,14 +43,14 @@ const Navbar = () => {
                     </div>
                     <a className="btn btn-ghost text-xl">Traveler'<span className='text-red-800'>s</span></a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                <div className="navbar-center hidden lg:flex w-50 ">
+                    <ul className="menu menu-horizontal px-1 ">
                         {Links}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <div>
-                        <label className="swap swap-rotate">
+                <div className="navbar-end w-48 ">
+                    <div className=''>
+                        <label className="swap swap-rotate ">
 
                             {/* this hidden checkbox controls the state */}
                             <input onChange={handleToggle} type="checkbox" className="theme-controller" />
@@ -60,22 +63,26 @@ const Navbar = () => {
 
                         </label>
                     </div>
-                    {
-                        user ? <div className='dropdown dropdown-hover'>
+                  <div className=''>
+                  {
+                        user ? <div className='dropdown dropdown-hover  left-48'>
                             <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
                                 <div className='w-10 rounded-full'>
                                     <img src={user?.photoURL} alt="" />
                                 </div>
                             </label>
-                            <ul tabIndex={0} className='menu menu-sm dropdown-content -left-28 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'>
+                            <ul tabIndex={0} className='menu menu-sm dropdown-content -left-28 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-48'>
                                 <li><button>{user.displayName}</button></li>
                                 <li><button onClick={logOut}>Log Out</button></li>
                             </ul>
                         </div> :
-                            <div className='md:flexv flex w-16 lg-w-16'>
-                                <Link to='/login'><button className='btn bg-black text-white'>Login Now</button></Link>
+                            <div className='md:flex flex w-2 gap-4'>
+                               
+                                <Link to="/register"><button className='btn  bg-green-300 text-black w-36 rounded-full'>sign up<Lottie className='w-10' animationData={signup}/></button></Link>
+                                <Link to='/login'><button className='btn flex bg-green-300 text-black w-36 rounded-full'>sign in <Lottie className='w-10' animationData={sign} /></button></Link>
                             </div>
                     }
+                  </div>
                 </div>
             </div>
         </div>

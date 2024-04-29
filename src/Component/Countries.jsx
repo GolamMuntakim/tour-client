@@ -10,7 +10,7 @@ const Countries = () => {
        console.log(countries)
 
        useEffect(()=>{
-        fetch('http://localhost:5000/country')
+        fetch('https://tour-server-ten.vercel.app/country')
         .then(res=>res.json())
         .then(data=>setCountries(data))
        },[])

@@ -29,7 +29,7 @@ const Addplace = () => {
         const newPlaces = {name, image,countryname,cost, time,email, spotname, location,season, visitor, description,usermail}
         console.log(newPlaces)
         //send to the server 
-        fetch('http://localhost:5000/places',{
+        fetch('https://tour-server-ten.vercel.app/places',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

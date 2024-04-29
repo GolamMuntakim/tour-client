@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import UseAuth from "./UseAuth";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Register = () => {
@@ -18,22 +19,20 @@ const Register = () => {
         if(!uppercaseRegx.test(password)){
             return;
         }
-        if(user){
-            alert('you are registered')
-            return;
-        }
         createUser(email, password).then(()=>{
             updateUserProfile(fullname, email, image)
-            .then(()=>{navigate(from)})
+            .then(()=>{
+              navigate(from)
+            })
             logOut()
         })
+        toast.success(' registered succesfully')
       }
     return (
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Regsiter now!</h1>
-            
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
@@ -83,6 +82,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Regsiter</button>
               </div>
+              <Toaster></Toaster>
               <div className="flex justify-between">
             <h1>Already registered?</h1>
             <Link to="/login"><h1>Login Now</h1></Link>
