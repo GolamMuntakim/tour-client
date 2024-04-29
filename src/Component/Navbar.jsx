@@ -24,7 +24,9 @@ const Navbar = () => {
     const Links = <>
         <NavLink to='/' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>Home</a></li></NavLink>
         <NavLink to='/all' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>All Tourist Spot</a></li></NavLink>
-        <NavLink to='/addplace' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>Add Touris Spot</a></li></NavLink>
+        {
+            user && <NavLink to='/addplace' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>Add Touris Spot</a></li></NavLink>
+        }
         <NavLink to='/updateplace' style={({isActive})=>(isActive?{background:"green", color:"white",borderRadius:"30px"}:{font:"bold"})}><li><a>My List</a></li></NavLink>
 
     </>

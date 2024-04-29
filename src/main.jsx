@@ -17,6 +17,7 @@ import Update from './Component/Update.jsx';
 import Countries from './Component/Countries.jsx';
 import View from './Component/View.jsx';
 import Viewcard from './Component/Viewcard.jsx';
+import PrivateRoute from './Component/PrivateRoute.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addplace',
-        element:<Addplace></Addplace>
+        element:<PrivateRoute><Addplace></Addplace></PrivateRoute>
       },
       {
         path:'/updateplace',
