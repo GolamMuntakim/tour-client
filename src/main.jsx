@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/updateplace',
-        element:<UpdatePlace></UpdatePlace>,
+        element:<PrivateRoute><UpdatePlace></UpdatePlace></PrivateRoute>,
         // loader:()=>fetch('https://tour-server-ten.vercel.app/places')
       },
       {
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/update/:id',
-        element:<Update></Update>
+        element:<PrivateRoute><Update></Update></PrivateRoute>
       },
       {
         path:'/country',
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/details/:id',
-        element:<Viewcard></Viewcard>,
+        element:<PrivateRoute><Viewcard></Viewcard></PrivateRoute>
         // loader:()=>fetch(`https://tour-server-ten.vercel.app/details`)
       }
     ]

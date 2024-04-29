@@ -59,13 +59,13 @@ const Addplace = () => {
                 <div className="label">
                     <span className="label-text">Full Name</span>
                 </div>
-                <input type="text" name="name" placeholder="give your full name" className="input input-bordered w-[400px]" />
+                <input type="text" name="name" placeholder="give your full name" className="input input-bordered w-[400px]" required/>
             </label>
           <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Image Url</span>
                 </div>
-                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-full " />
+                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full ">
                 <div className="label">
@@ -90,13 +90,13 @@ const Addplace = () => {
                 <div className="label">
                     <span className="label-text">Average Cost</span>
                 </div>
-                <input type="text" name="cost" placeholder="average cost" className="input input-bordered w-full " />
+                <input type="text" name="cost" placeholder="average cost" className="input input-bordered w-full " required/>
             </label>
             <label className="form-control w-full ">
                 <div className="label">
                     <span className="label-text">Travel Time</span>
                 </div>
-                <input type="text" name="time" placeholder="Time" className="input input-bordered w-full " />
+                <input type="text" name="time" placeholder="Time" className="input input-bordered w-full " required/>
             </label>
           </div>
           <div>
@@ -104,31 +104,31 @@ const Addplace = () => {
                 <div className="label">
                     <span className="label-text">Email</span>
                 </div>
-                <input type="email" name="email" placeholder="give your email" className="input input-bordered w-[400px]" />
+                <input type="email" name="email" placeholder="give your email" className="input input-bordered w-[400px]" required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Tourist Spot Name</span>
                 </div>
-                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-full" />
+                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-full" required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Location</span>
                 </div>
-                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-full" />
+                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-full" required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Season</span>
                 </div>
-                <input type="text" name="season" placeholder="Season" className="input input-bordered w-full" />
+                <input type="text" name="season" placeholder="Season" className="input input-bordered w-full" required/>
             </label>
             <label className="form-control w-full">
                 <div className="label">
                     <span className="label-text">Total visitor</span>
                 </div>
-                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-full" />
+                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-full" required/>
             </label>
           </div>
           
@@ -138,7 +138,7 @@ const Addplace = () => {
                 <div className="label">
                     <span className="label-text">Descriptio</span>
                 </div>
-                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-full " />
+                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-full " required/>
             </label>
         </div>
         <div className="ml-52 mr-52 mt-4" >

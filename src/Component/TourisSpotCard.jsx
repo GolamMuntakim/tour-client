@@ -15,8 +15,8 @@ const TourisSpotCard = ({place}) => {
                 <div className="card-body">
                     <h2 className="card-title">Spot Name : {spotname}</h2>
                     <p>Country : {countryname}</p>
-                    <p className="flex items-center justify-start"><MdAttachMoney />: {cost}</p>
-                    <p className="flex items-center justify-start"><MdAddLocationAlt />: {location}</p>
+                    <p className="flex items-center justify-start"><MdAttachMoney /> {cost}</p>
+                    <p className="flex items-center justify-start"><MdAddLocationAlt /> {location}</p>
                     <div className="w-full ">
                        <Link to={`/details/${_id}`}><button className="btn bg-[green] text-white w-full">View Details</button></Link>
                     </div>

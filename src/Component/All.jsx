@@ -35,7 +35,7 @@ const All = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='grid grid-cols-3 mt-8 gap-4'>
+                <div className='grid grid-cols-3 mt-8 gap-4 w-[1200px] mx-auto'>
                     {
                         sortedSpot.map(all => <Card key={all._id} all={all}></Card>)
                     }
