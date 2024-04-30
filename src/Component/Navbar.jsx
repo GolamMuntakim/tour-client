@@ -34,7 +34,7 @@ const Navbar = () => {
 
     return (
         <div className='w-[140px] lg:w-[1200px] lg:mx-auto'>
-            <div className="navbar bg-base-100 fixed top-0 z-50">
+            <div className="navbar bg-base-100 fixed top-0 z-50 ">
                 <div className="navbar-start  lg:w-80 ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -51,7 +51,7 @@ const Navbar = () => {
                         {Links}
                     </ul>
                 </div>
-                <div className="flex-end  lg:w-48 ">
+                <div className="flex-end  -ml-24 lg:ml-2">
                     <div className=''>
                         <label className="swap swap-rotate ">
 
@@ -68,7 +68,7 @@ const Navbar = () => {
                     </div>
                   <div className=''>
                   {
-                        user ? <div className='dropdown dropdown-hover  lg:left-48'>
+                        user ? <div className='dropdown dropdown-hover  '>
                             <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
                                 <div className='w-10 rounded-full'>
                                     <img src={user?.photoURL} alt="" />
@@ -79,7 +79,7 @@ const Navbar = () => {
                                 <li><button onClick={logOut}>Log Out</button></li>
                             </ul>
                         </div> :
-                            <div className='md:flex flex w-2 gap-4'>
+                            <div className=' flex w-2 gap-4 '>
                                
                                 <Link to="/register"><button className='btn  bg-green-300 text-black lg:w-36 w-28 rounded-full'>sign up<Lottie className='md:w-10 w-5 hidden lg:flex' animationData={signup}/></button></Link>
                                 <Link to='/login'><button className='btn flex bg-green-300 text-black lg:w-36 w-28 rounded-full'>sign in <Lottie className='md:w-10 w-5 hidden lg:flex' animationData={sign} /></button></Link>

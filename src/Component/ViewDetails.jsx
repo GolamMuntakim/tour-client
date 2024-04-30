@@ -18,7 +18,7 @@ const ViewDetails = ({detail}) => {
                     Countries
                 </title>
             </Helmet>
-            <div className="card h-[800px] w-[350px] lg:w-[400px] mx-auto bg-base-100 shadow-xl">
+            <div className="card h-[800px] w-[350px] lg:w-[400px] mx-auto bg-base-100 shadow-xl mt-20">
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Spot Name : {spotname}</h2>

@@ -34,8 +34,8 @@ const All = () => {
                     All Tourist Spot
                 </title>
             </Helmet>
-            <div>
-                <h1 className='text-4xl font-bold text-center'>All Touris Spot</h1>
+            <div className="mt-20">
+                <h1 className='text-4xl font-bold text-center'>All Tourist Spot</h1>
                 <div className="flex justify-center">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn m-1" >Sort By</div>

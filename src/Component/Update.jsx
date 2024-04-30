@@ -59,7 +59,7 @@ const Update = () => {
         })
     },[id])
     return (
-        <div className="bg-[url('/image/kualalampur.avif')] rounded-xl w-[350px] md:w-[400px] lg:w-[1200px] mx-auto p-4">
+        <div className="bg-[url('/image/kualalampur.avif')] rounded-xl w-[350px] md:w-[400px] lg:w-[1200px] mx-auto p-4 mt-20">
         <form onSubmit={handleUpdate}>
         <div className="flex flex-col lg:flex-row  gap-4 ml-2 lg:ml-52 ">
           <div>
@@ -90,8 +90,9 @@ const Update = () => {
                 <option value="Bangladesh">Bangladesh</option>
                         <option value="Thiland">Thiland</option>
                         <option value="Indoneshia">Indoneshia</option>
-                        <option value="combodia">Combodia</option>
+                        <option value="combodia">combodia</option>
                         <option value="Malyshia">Malyshia</option>
+                        <option value="Malyshia">vietnam</option>
                 </select>
                </div>
             </label>

@@ -62,7 +62,7 @@ const UpdatePlace = () => {
                     My List
                 </title>
             </Helmet>
-        <div className="overflow-x-auto ">
+        <div className="overflow-x-auto mt-20">
         <table className="lg:table w-[360px] lg:w-full  ">
           {/* head */}
           <thead className="border border-red-500 ">

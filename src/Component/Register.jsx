@@ -44,10 +44,10 @@ const Register = () => {
           Sign up
         </title>
        </Helmet>
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen bg-base-200 mt-20">
         <div className="hero-content w-[350px] lg:w-[600px] flex-col lg:flex-row-reverse">
           <div className=" shrink-0 w-[350px] lg:w-[500px]  p-10 shadow-2xl bg-[url('/image/Angkor.avif')] bg-no-repeat bg-cover rounded-2xl ">
-          <h1 className="text-4xl font-bold text-white text-center">Register now</h1>
+          <h1 className="text-4xl font-bold text-white text-center">Sign up now</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="">
             <div className="form-control">
                 <label className="label">

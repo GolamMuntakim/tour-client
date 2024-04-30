@@ -1,10 +1,8 @@
 import Lottie from 'lottie-react';
-
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-
 import plan2 from './plan2.json'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -49,7 +47,7 @@ const Banner = () => {
                 <span> {text}</span>
                 <span className='text-red-500'><Cursor/></span>
                 </h1>
-                <button className="btn bg-black text-white rounded-full border-none">Contact us now <Lottie className='w-8' animationData={plan2}/></button>
+                <button className="btn bg-black text-white rounded-full border-none">Contact us Now<Lottie className='w-8' animationData={plan2}/></button>
             </div>
         </div>
         </SwiperSlide>
