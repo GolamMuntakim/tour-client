@@ -81,7 +81,7 @@ const Review = () => {
 	</div>
         </div>
         </div>
-        <div className="flex flex-col p-4 shadow-sm rounded-xl lg:p-4 bg-green-700 text-gray-100 mx-auto mt-4 w-[350px] lg:w-[400px] h-[400px]">
+        {/* <div className="flex flex-col p-4 shadow-sm rounded-xl lg:p-4 bg-green-700 text-gray-100 mx-auto mt-4 w-[350px] lg:w-[400px] h-[400px]">
 	<div className="flex flex-col items-center w-full">
 		<h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
 		<div className="flex flex-col items-center py-6 space-y-3">
@@ -119,10 +119,8 @@ const Review = () => {
 			<button type="button" className="py-4 my-8 font-semibold rounded-md text-white-900 bg-green-950">Leave feedback</button>
 		</div>
 	</div>
-	{/* <div className="flex items-center justify-center">
-		<a rel="noopener noreferrer" href="#" className="text-sm text-gray-400">Maybe later</a>
-	</div> */}
-        </div>
+	
+        </div> */}
         </div>
 
         <section className="p-6 text-gray-100">

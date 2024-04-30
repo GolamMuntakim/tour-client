@@ -4,6 +4,7 @@ import UseAuth from './UseAuth';
 import sign from './sign.json'
 import signup from './signup.json'
 import Lottie from 'lottie-react';
+import world from './world.json'
 
 const Navbar = () => {
     const { user, logOut } = UseAuth()
@@ -33,7 +34,7 @@ const Navbar = () => {
 
     return (
         <div className='w-[140px] lg:w-[1200px] lg:mx-auto'>
-            <div className="navbar bg-base-100 ">
+            <div className="navbar bg-base-100 fixed top-0 z-50">
                 <div className="navbar-start  lg:w-80 ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,7 +44,7 @@ const Navbar = () => {
                             {Links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl hidden lg:flex">Traveler'<span className='text-red-800'>s</span></a>
+                    <a className="btn btn-ghost text-xl hidden lg:flex"><Lottie className="w-10" animationData={world}/>Traveler'<span className='text-red-800'>s</span></a>
                 </div>
                 <div className=" hidden lg:flex lg:w-50 ">
                     <ul className="menu menu-horizontal px-1 ">
