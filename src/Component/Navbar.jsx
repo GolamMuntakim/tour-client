@@ -8,18 +8,21 @@ import world from './world.json'
 
 const Navbar = () => {
     const { user, logOut } = UseAuth()
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(()=>{
+        return localStorage.getItem('theme') || 'light';
+    })
     useEffect(() => {
         localStorage.setItem('theme', theme)
         const localTheme = localStorage.getItem('theme')
-        document.querySelector('html').setAttribute('data-theme', localTheme)
+        document.querySelector('html').setAttribute('data-theme', theme)
     }, [theme])
     const handleToggle = e => {
-        if (e.target.checked) {
-            setTheme('dark')
-        } else {
-            setTheme('light')
-        }
+        setTheme(prevTheme=>(prevTheme==='light' ? 'dark' : 'light'))
+        // if (e.target.checked) {
+        //     setTheme('dark')
+        // } else {
+        //     setTheme('light')
+        // }
     }
     // console.log(theme)
     const Links = <>
