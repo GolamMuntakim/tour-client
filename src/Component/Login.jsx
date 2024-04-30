@@ -4,10 +4,14 @@ import UseAuth from "./UseAuth";
 import { FaGoogle } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import toast, { Toaster } from "react-hot-toast";
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
+import { useState } from "react";
 
 
 const Login = () => {
-    const {logInUser,googleLogin,githubLogin,loading} =  UseAuth()
+    const {logInUser,googleLogin,githubLogin,loading} =  UseAuth();
+    const [showPassword, setShowPassword] = useState(false)
     const {
         register,
         handleSubmit,
@@ -62,17 +66,18 @@ const Login = () => {
           {errors.email && <small className="text-red-500">This field is required</small>}
          
         </div>
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" 
-          {...register("password", {required:true})}
-           />
+          <input type={showPassword? "text" : "password"} placeholder="password" className="input input-bordered" 
+          {...register("password", {required:true})}/>
+          <span className="absolute right-10 lg:left-96 bottom-4" onClick={()=>setShowPassword(!showPassword)}>
+            {
+              showPassword ? <FaRegEyeSlash/> : <FaRegEye/>
+            }
+          </span>
            {errors.password && <small className="text-red-500">This field is required</small>}
-          {/* <label className="label">
-            <a href="#" className="label-text-alt link link-hover ">Forgot password?</a>
-          </label> */}
         </div>
         <div className="form-control mt-6">
           <button className="btn bg-[green] border-none text-white">Login</button>

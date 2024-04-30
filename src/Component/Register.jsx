@@ -2,10 +2,14 @@ import { useForm } from "react-hook-form";
 import UseAuth from "./UseAuth";
 import { Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { FaRegEyeSlash } from "react-icons/fa6";
+import { useState } from "react";
+import { FaRegEye } from "react-icons/fa6";
 
 
 const Register = () => {
     const {createUser, user,updateUserProfile,logOut,loading} = UseAuth()
+    const [showPassword, setShowPassword] = useState(false)
     const {
         register,
         handleSubmit,
@@ -65,21 +69,24 @@ const Register = () => {
                 />
                 {errors.email && <small className="text-red-500">This field is required</small>}
               </div>
-              <div className="form-control">
+              <div className="form-control relative">
                 <label className="label">
                   <span className="label-text text-white">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" 
+                <input type={showPassword? "text" : "password"} placeholder="password" className="input input-bordered" 
                 {...register("password", {required:true,minLength:6,validate:value=>uppercaseRegx.test(value)|| "password must have an at least one uppercase and one lowercase letter"})}/>
+                <span className="absolute right-10 lg:left-96 bottom-4" onClick={()=>setShowPassword(!showPassword)}>
+            {
+              showPassword ? <FaRegEyeSlash/> : <FaRegEye/>
+            }
+          </span>
                  {errors.password && errors.password.type ==="required" &&<small className="text-red-500">This field is required</small>}
 
                  {errors.password && errors.password.type ==="minLength" &&<small className="text-red-500">password must have 6 charecter</small>}
 
                  {errors.password && errors.password.type ==="validate" &&<small className="text-red-500">{errors.password.message}</small>}
 
-                {/* <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label> */}
+                
               </div>
               <div className="form-control mt-6">
                 <button className="btn bg-[green] text-white border-none">Regsiter</button>
