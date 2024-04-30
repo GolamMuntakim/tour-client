@@ -21,7 +21,7 @@ const Banner = () => {
         deleteSpeed:50,
     });
     return (
-        <>
+        <div className="w-[350px] md:w-[400px] lg:w-[1200px] mx-auto">
         <div className='flex lg:flex-row flex-col justify-around  items-center bg-green-400  lg:w-[800x] mx-auto rounded-xl p-10 h-[500px] lg:h-[400px] '>
             <div className=''>
                 <h1 className='text-white mb-2 font-extrabold text-4xl'>Explore The Word</h1>
@@ -73,7 +73,7 @@ const Banner = () => {
           </div>
            
         </div>
-        </>
+        </div>
     );
 };
 

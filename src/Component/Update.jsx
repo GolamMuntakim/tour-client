@@ -59,7 +59,7 @@ const Update = () => {
         })
     },[id])
     return (
-        <div className="bg-base-300">
+        <div className="bg-base-300 w-[350px] md:w-[400px] lg:w-[1200px] mx-auto">
         <form onSubmit={handleUpdate}>
         <div className="flex flex-col lg:flex-row  gap-4 ml-2 lg:ml-52 ">
           <div>

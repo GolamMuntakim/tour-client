@@ -12,13 +12,13 @@ const ViewDetails = ({detail}) => {
     }
     const newdesc = desc(description)
     return (
-        <div>
+        <div className="">
           <Helmet>
                 <title>
                     Countries
                 </title>
             </Helmet>
-            <div className="card h-[800px] bg-base-100 shadow-xl">
+            <div className="card h-[800px] w-[350px] lg:w-[400px] mx-auto bg-base-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">Spot Name : {spotname}</h2>

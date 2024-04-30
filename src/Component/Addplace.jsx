@@ -59,7 +59,7 @@ const Addplace = () => {
                     Add Tourist Spot
                 </title>
             </Helmet>
-        <div className="bg-base-300 md:mx-auto">
+        <div className="bg-base-300 w-[350px] md:w-[400px] lg:w-[1200px] mx-auto">
         <form onSubmit={handleAdd}>
         <div className="flex flex-col lg:flex-row gap-4 ml-2 lg:ml-52 ">
           <div>
