@@ -59,7 +59,7 @@ const Addplace = () => {
                     Add Tourist Spot
                 </title>
             </Helmet>
-        <div className="bg-base-300 w-[350px] md:w-[400px] lg:w-[1200px] mx-auto p-4">
+        <div className="bg-[url('/image/bangkok.avif')] bg-no-repeat bg-cover rounded-xl w-[350px] md:w-[400px] lg:w-[1200px] mx-auto p-4">
         <form onSubmit={handleAdd}>
         <div className="flex flex-col lg:flex-row gap-4 ml-2 lg:ml-52 ">
           <div>
@@ -68,13 +68,13 @@ const Addplace = () => {
                     <span className="label-text">Full Name</span>
                 </div>
                 <input type="text" name="name" placeholder="give your full name" className="input input-bordered 
-               w-[350px] lg:w-[400px]" required/>
+               w-[300px] lg:w-[400px]" required/>
             </label>
           <label className="form-control w-[350px] lg:w-full ">
                 <div className="label">
                     <span className="label-text">Image Url</span>
                 </div>
-                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-full " required/>
+                <input type="text" name="image" placeholder="give your Image Url" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
             <label className="form-control w-[350px] lg:w-full ">
                 <div className="label">
@@ -82,7 +82,7 @@ const Addplace = () => {
                 </div>
                <div className="w-[]">
                 <select 
-                className=" w-[350px] lg:w-[400px] h-[50px] rounded-lg"
+                className=" w-[300px] lg:w-[400px] h-[50px] rounded-lg"
                 name="countryname" 
                 id="select select-bordered "
                 value={selectedCountry}
@@ -96,50 +96,50 @@ const Addplace = () => {
                 </select>
                </div>
             </label>
-            <label className="form-control w-[350px] lg:w-full ">
+            <label className="form-control w-[300px] lg:w-full ">
                 <div className="label">
                     <span className="label-text">Average Cost</span>
                 </div>
                 <input type="text" name="cost" placeholder="average cost" className="input input-bordered w-full " required/>
             </label>
-            <label className="form-control w-[350px] lg:w-full ">
+            <label className="form-control w-[300px] lg:w-full ">
                 <div className="label">
                     <span className="label-text">Travel Time</span>
                 </div>
-                <input type="text" name="time" placeholder="Time" className="input input-bordered w-full " required/>
+                <input type="text" name="time" placeholder="Time" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
           </div>
           <div>
-          <label className="form-control w-[350px] lg:w-full ">
+          <label className="form-control w-[300px] lg:w-full ">
                 <div className="label">
                     <span className="label-text">Email</span>
                 </div>
                 <input type="email" name="email" placeholder="give your email" className="input input-bordered 
-                 w-[350px] lg:w-[400px]" required/>
+                 w-[300px] lg:w-[400px]" required/>
             </label>
             <label className="form-control w-[350px] lg:w-full">
                 <div className="label">
                     <span className="label-text">Tourist Spot Name</span>
                 </div>
-                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-full" required/>
+                <input type="text" name="spotname" placeholder="give touris spot name" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
             <label className="form-control w-[350px] lg:w-full">
                 <div className="label">
                     <span className="label-text">Location</span>
                 </div>
-                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-full" required/>
+                <input type="text" name="location" placeholder="give your location" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
             <label className="form-control w-[350px] lg:w-full">
                 <div className="label">
                     <span className="label-text">Season</span>
                 </div>
-                <input type="text" name="season" placeholder="Season" className="input input-bordered w-full" required/>
+                <input type="text" name="season" placeholder="Season" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
             <label className="form-control w-[350px] lg:w-full">
                 <div className="label">
                     <span className="label-text">Total visitor</span>
                 </div>
-                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-full" required/>
+                <input type="text" name="visitor" placeholder="visitor" className="input input-bordered w-[300px] lg:w-[400px]" required/>
             </label>
           </div>
           
@@ -149,7 +149,7 @@ const Addplace = () => {
                 <div className="label">
                     <span className="label-text">Description</span>
                 </div>
-                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-full " required/>
+                <input type="text" name="description" placeholder="Type here" className="input input-bordered w-[300px] lg:w-[800px]" required/>
             </label>
         </div>
         <div className="ml-2 mr-2 lg:ml-52 lg:mr-52 mt-4" >
