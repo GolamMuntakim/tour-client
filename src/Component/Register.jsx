@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -37,6 +38,12 @@ const Register = () => {
         return <div className="flex justify-center items-center"><span className="loading loading-bars loading-lg"></span></div>
       }
     return (
+       <>
+       <Helmet>
+        <title>
+          Sign up
+        </title>
+       </Helmet>
         <div className="hero min-h-screen bg-base-200">
         <div className="hero-content w-[350px] lg:w-[600px] flex-col lg:flex-row-reverse">
           <div className=" shrink-0 w-[350px] lg:w-[500px]  p-10 shadow-2xl bg-[url('/image/Angkor.avif')] bg-no-repeat bg-cover rounded-2xl ">
@@ -100,6 +107,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+       </>
     );
 };
 

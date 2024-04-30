@@ -19,6 +19,7 @@ import View from './Component/View.jsx';
 import Viewcard from './Component/Viewcard.jsx';
 import PrivateRoute from './Component/PrivateRoute.jsx';
 import Error from './Component/Error.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -76,8 +77,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
+   <HelmetProvider>
+   <AuthProvider>
     <RouterProvider router={router} />
     </AuthProvider>
+   </HelmetProvider>
   </React.StrictMode>,
 )

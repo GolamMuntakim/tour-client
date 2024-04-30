@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {  useParams } from "react-router-dom";
 import UseAuth from "./UseAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const Viewcard = () => {
@@ -25,6 +26,11 @@ const Viewcard = () => {
       }
     return (
         <div className="">
+             <Helmet>
+                <title>
+                    View details
+                </title>
+            </Helmet>
           <section>
 	<div className="bg-green-950">
 		<div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">

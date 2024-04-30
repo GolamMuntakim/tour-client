@@ -7,6 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -49,6 +50,12 @@ const Login = () => {
         })
       }
     return (
+      <>
+      <Helmet>
+        <title>
+          Sign in
+        </title>
+       </Helmet>
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content ">
 
@@ -95,6 +102,7 @@ const Login = () => {
     </div>
   </div>
 </div>
+</>
     );
 };
 

@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Card from "./Card";
 import { useState } from "react";
 import UseAuth from "./UseAuth";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -28,6 +29,11 @@ const All = () => {
   
     return (
         <div>
+             <Helmet>
+                <title>
+                    All Tourist Spot
+                </title>
+            </Helmet>
             <div>
                 <h1 className='text-4xl font-bold text-center'>All Touris Spot</h1>
                 <div className="flex justify-center">

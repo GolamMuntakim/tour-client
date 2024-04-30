@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { MdAttachMoney } from "react-icons/md";
 import { MdAccessTime } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const Card = ({all}) => {
     const  {name, image,countryname,cost, time,email, _id,spotname, location,season, visitor, description} = all;
     return (
         <div>
+           
         <div className="card h-[500px]  bg-base-100 shadow-xl">
             <figure><img src={image} alt="Shoes" className="h-[300px] w-full" /></figure>
             <div className="card-body">

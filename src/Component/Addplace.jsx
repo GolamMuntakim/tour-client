@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import UseAuth from "./UseAuth";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -52,6 +53,12 @@ const Addplace = () => {
     }
    
     return (
+        <>
+         <Helmet>
+                <title>
+                    Add Tourist Spot
+                </title>
+            </Helmet>
         <div className="bg-base-300 md:mx-auto">
         <form onSubmit={handleAdd}>
         <div className="flex flex-col lg:flex-row gap-4 ml-2 lg:ml-52 ">
@@ -150,6 +157,7 @@ const Addplace = () => {
         </div>
         </form>
         </div>
+        </>
     );
 };
 

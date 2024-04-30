@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import UseAuth from "./UseAuth";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdatePlace = () => {
@@ -55,6 +56,12 @@ const UpdatePlace = () => {
     }
    
     return (
+      <>
+       <Helmet>
+                <title>
+                    My List
+                </title>
+            </Helmet>
         <div className="overflow-x-auto ">
         <table className="lg:table w-[360px] lg:w-full  ">
           {/* head */}
@@ -84,6 +91,7 @@ const UpdatePlace = () => {
           </tbody>
         </table>
       </div>
+      </>
     );
 };
 

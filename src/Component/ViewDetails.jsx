@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
+import { Helmet } from "react-helmet-async";
 
 
 const ViewDetails = ({detail}) => {
@@ -12,6 +13,11 @@ const ViewDetails = ({detail}) => {
     const newdesc = desc(description)
     return (
         <div>
+          <Helmet>
+                <title>
+                    Countries
+                </title>
+            </Helmet>
             <div className="card h-[800px] bg-base-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
   <div className="card-body">
