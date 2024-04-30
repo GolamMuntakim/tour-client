@@ -65,7 +65,7 @@ const UpdatePlace = () => {
         <div className="overflow-x-auto mt-20">
         <table className="lg:table w-[360px] lg:w-full  ">
           {/* head */}
-          <thead className="border border-red-500 ">
+          <thead className=" ">
             <tr className="">
               <th className="hidden lg:flex"></th>
               <th>Name</th>
