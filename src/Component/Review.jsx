@@ -4,6 +4,9 @@ import Marquee from "react-fast-marquee";
 const Review = () => {
     return (
         <>
+		<h2 className="text-center text-4xl font-bold mt-8">
+			Review
+		</h2>
         <div className="flex flex-col lg:flex-row lg:justify-around items-center">
 
        <Marquee>
