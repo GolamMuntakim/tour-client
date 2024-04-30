@@ -55,23 +55,23 @@ const UpdatePlace = () => {
     }
    
     return (
-        <div className="overflow-x-auto">
-        <table className="table">
+        <div className="overflow-x-auto ">
+        <table className="lg:table w-[360px] lg:w-full  ">
           {/* head */}
-          <thead>
-            <tr>
-              <th></th>
+          <thead className="border border-red-500 ">
+            <tr className="">
+              <th className="hidden lg:flex"></th>
               <th>Name</th>
               <th>Place</th>
               <th>Update</th>
               <th>Delete</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {
                 item.map((table,idx)=> (
                     <tr key="table._id">
-              <th>{idx}</th>
+              <th className="hidden lg:flex">{idx}</th>
               <td>{table.name}</td>
               <td>{table.spotname}</td>
               <td><Link to={`/update/${table._id}`}><button className="btn btn-accent">Update</button></Link></td>

@@ -32,25 +32,25 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='w-[1200px] m-auto '>
+        <div className='w-[140px] lg:w-[1200px] lg:mx-auto'>
             <div className="navbar bg-base-100 ">
-                <div className="navbar-start w-80">
+                <div className="navbar-start  lg:w-80 ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:w-52">
                             {Links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">Traveler'<span className='text-red-800'>s</span></a>
+                    <a className="btn btn-ghost text-xl hidden lg:flex">Traveler'<span className='text-red-800'>s</span></a>
                 </div>
-                <div className="navbar-center hidden lg:flex w-50 ">
+                <div className=" hidden lg:flex lg:w-50 ">
                     <ul className="menu menu-horizontal px-1 ">
                         {Links}
                     </ul>
                 </div>
-                <div className="navbar-end w-48 ">
+                <div className="flex-end  lg:w-48 ">
                     <div className=''>
                         <label className="swap swap-rotate ">
 
@@ -67,21 +67,21 @@ const Navbar = () => {
                     </div>
                   <div className=''>
                   {
-                        user ? <div className='dropdown dropdown-hover  left-48'>
+                        user ? <div className='dropdown dropdown-hover  lg:left-48'>
                             <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
                                 <div className='w-10 rounded-full'>
                                     <img src={user?.photoURL} alt="" />
                                 </div>
                             </label>
-                            <ul tabIndex={0} className='menu menu-sm dropdown-content -left-28 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-48'>
+                            <ul tabIndex={0} className='menu menu-sm dropdown-content lg:-left-28 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box lg:w-48'>
                                 <li><button>{user.displayName}</button></li>
                                 <li><button onClick={logOut}>Log Out</button></li>
                             </ul>
                         </div> :
                             <div className='md:flex flex w-2 gap-4'>
                                
-                                <Link to="/register"><button className='btn  bg-green-300 text-black w-36 rounded-full'>sign up<Lottie className='w-10' animationData={signup}/></button></Link>
-                                <Link to='/login'><button className='btn flex bg-green-300 text-black w-36 rounded-full'>sign in <Lottie className='w-10' animationData={sign} /></button></Link>
+                                <Link to="/register"><button className='btn  bg-green-300 text-black lg:w-36 w-28 rounded-full'>sign up<Lottie className='md:w-10 w-5 hidden lg:flex' animationData={signup}/></button></Link>
+                                <Link to='/login'><button className='btn flex bg-green-300 text-black lg:w-36 w-28 rounded-full'>sign in <Lottie className='md:w-10 w-5 hidden lg:flex' animationData={sign} /></button></Link>
                             </div>
                     }
                   </div>

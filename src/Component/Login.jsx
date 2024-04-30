@@ -48,7 +48,7 @@ const Login = () => {
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content ">
 
-    <div className="  w-[600px] h-[400px] mx-auto p-8 shadow-2xl rounded-2xl" 
+    <div className=" w-[350px] lg:w-[600px] h-[400px] mx-auto p-8 shadow-2xl rounded-2xl" 
     style={{backgroundImage: `url('/image/sundarban.avif')`, backgroundRepeat:"no-repeat"}} >
     <h1 className="text-5xl font-bold text-white text-center">Login now!</h1>
       <form onSubmit={handleSubmit(onSubmit)} className="">

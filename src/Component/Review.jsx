@@ -3,10 +3,11 @@
 const Review = () => {
     return (
         <>
-        <div className="flex justify-around items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-around items-center">
         <div className="mt-8 mx-auto ">
             
-            <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-green-700 text-gray-100 w-[400px] h-[400px]">
+            <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 bg-green-700 text-gray-100 
+			w-[350px] lg:w-[400px] h-[400px]">
 	<div className="flex flex-col w-full">
 		<h2 className="text-3xl font-semibold text-center">Customer reviews</h2>
 		<div className="flex flex-wrap items-center mt-2 mb-1 space-x-2">
@@ -80,7 +81,7 @@ const Review = () => {
 	</div>
         </div>
         </div>
-        <div className="flex flex-col max-w-xl p-4 shadow-sm rounded-xl lg:p-4 bg-green-700 text-gray-100 mx-auto mt-4 w-[400px] h-[400px]">
+        <div className="flex flex-col p-4 shadow-sm rounded-xl lg:p-4 bg-green-700 text-gray-100 mx-auto mt-4 w-[350px] lg:w-[400px] h-[400px]">
 	<div className="flex flex-col items-center w-full">
 		<h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
 		<div className="flex flex-col items-center py-6 space-y-3">

@@ -10,7 +10,7 @@ const TourisSpotCard = ({place}) => {
   
     return (
         <div>
-            <div className="card h-[500px] bg-base-100 shadow-xl">
+            <div className="card w-[350px] mx-auto h-[500px] bg-base-100 shadow-xl">
                 <figure><img src={image} alt="Shoes"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Spot Name : {spotname}</h2>

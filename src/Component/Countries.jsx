@@ -18,7 +18,7 @@ const Countries = () => {
         <div>
             <h1 className="text-4xl font-bold text-center mt-8">Countries</h1>
            
-            <div className='grid grid-cols-3 mt-8 gap-4 w-[1200px] mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-4 lg:w-[1200px] mx-auto'>
            {
                 countries.map(country=><CountryCard key={country._id} country={country}></CountryCard>)
             }
