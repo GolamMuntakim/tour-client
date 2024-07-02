@@ -1,6 +1,9 @@
 # Website name is = Traveler's
 ## Website URL = https://tour-client-6eeb8.web.app/
-### My selected Category is : Southeast Asia
+### server side github link=https://github.com/GolamMuntakim/tour-server
+### Overview of project = This website is mainly tourist place blog based website , where user can add best tourist place of their country(mainly focus on south asia).And they will share how much cost need to visite those place , discription etc. 
+### Technology: 
+[firebase]
 ### 5 features of my site is : <br>
 + User can add their favourite place 
 + User can update their selected place

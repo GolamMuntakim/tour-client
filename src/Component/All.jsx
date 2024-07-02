@@ -35,10 +35,9 @@ const All = () => {
                 </title>
             </Helmet>
             <div className="mt-20">
-                <h1 className='text-4xl font-bold text-center'>All Tourist Spot</h1>
                 <div className="flex justify-center">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn m-1" >Sort By</div>
+                        <div tabIndex={0} role="button" className="btn m-1" >Sort By Difficulty level</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li onClick={sortByCost}><a>sort By average cost</a></li>
                         </ul>
